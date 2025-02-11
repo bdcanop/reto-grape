@@ -32,7 +32,7 @@ RSpec.describe Product, type: :model do
     it "is not valid if the price is less than 0" do
       @product.price = -1
       expect(@product).not_to be_valid
-      expect(@product.errors[:price]).to include("must be greater than 0")
+      expect(@product.errors[:price]).to include("must be greater than or equal to 0")
     end
 
     it "is not valid without stock" do
