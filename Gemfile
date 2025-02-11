@@ -6,7 +6,7 @@ ruby "3.4.1"
 gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+#gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", ">= 1.4"
@@ -47,6 +47,17 @@ gem "bootsnap", require: false
 gem "grape"
 gem "grape-entity"
 
+gem 'activeadmin', '~> 3.2', '>= 3.2.4'
+
+# Plus integrations with:
+gem "devise"
+gem "cancancan"
+gem "draper"
+gem "pundit"
+
+gem "sassc-rails"
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
@@ -66,7 +77,10 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "faker"
   gem "rspec-rails"
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "sprockets-rails", "~> 3.5"
